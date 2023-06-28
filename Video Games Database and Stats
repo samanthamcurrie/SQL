@@ -1,0 +1,27 @@
+--Create a video game database
+CREATE TABLE videogames (id INTEGER PRIMARY KEY, name TEXT, releaseyear INTEGER, category TEXT, rating TEXT, review INTEGER, price INTEGER);
+
+--Add data to database
+INSERT INTO videogames VALUES (1, "Sonic Origins", 2022, "Action", "Everyone", 4, 79.99);
+INSERT INTO videogames VALUES (2, "Animal Crossing", 2021, "Simulation", "Everyone", 5, 79.99);
+INSERT INTO videogames VALUES (3, "Zelda Breath of the Wild", 2017, "Adventure", "Ten and Up", 4.5, 79.99);
+INSERT INTO videogames VALUES (4, "Just Dance 2022", 2022, "Music", "Everyone", 3.5, 0);
+INSERT INTO videogames VALUES (5, "Kirbys Dream Buffet", 2022, "Action", "Everyone", 3, 19.99);
+INSERT INTO videogames VALUES (6, "Octopath Traveller 2", 2023, "Role-Playing", "Teen", 3.5, 79.99);
+INSERT INTO videogames VALUES (7, "Live A Live", 2022, "Role-Playing", "Teen", 3, 64.99);
+INSERT INTO videogames VALUES (8, "Lost Sphear", 2018, "Role-Playing", "Ten and Up", 4, 69.99);
+INSERT INTO videogames VALUES (9, "Monster Boy and the Cursed Kingdom", 2018, "Action", "Ten and Up", 3, 49.99);
+INSERT INTO videogames VALUES (10, "Owlboy", 2018, "Adenture", "Ten and Up", 4, 11.19);
+INSERT INTO videogames VALUES (11, "Hollow Knight", 2018, "Action", "Ten and Up", 4.5, 16.99);
+INSERT INTO videogames VALUES (12, "Celeste", 2018, "Action", "Ten and Up", 3.5, 24.51);
+INSERT INTO videogames VALUES (13, "Cuphead", 2019, "Arcade", "Ten and Up", 4.5, 25.99);
+INSERT INTO videogames VALUES (15, "Downwell", 2019, "Arcade", "Ten and Up", 5, 3.77);
+
+--Display database ordered by price
+SELECT * FROM video games ORDER BY price;
+
+--What video games are less than fifty dollars in ascending price
+SELECT * FROM videogames WHERE price <50 ORDER BY price asc;
+
+--What are the top 5 highest reviewed video games?
+SELECT * FROM videogames ORDER BY review desc LIMIT 5;
