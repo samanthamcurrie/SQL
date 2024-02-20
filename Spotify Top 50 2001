@@ -55,3 +55,10 @@ SELECT artist_name, track_name, avg(popularity), avg(danceability), avg(energy)
 FROM BIT_DB.Spotifydata
 GROUP BY artist_name, track_name;
 
+#5. Which artists have more than one song in the top 50 Spotify list for 2021?
+
+SELECT artist_name, COUNT(track_name)
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name
+HAVING COUNT (track_name) >1;
+
